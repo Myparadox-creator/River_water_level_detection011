@@ -1,0 +1,41 @@
+/* DashboardLayout.css — supplemental styles (bulk from index.css) */
+
+.sidebar-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo-text h2 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.sidebar-nav-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-nav-section {
+  padding: 12px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav-links {
+  flex: 1;
+}
+
+.sidebar-logout .sidebar-nav-item {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-logout .sidebar-nav-item:hover {
+  color: #EF5350;
+  background: rgba(239, 83, 80, 0.1);
+}

@@ -1,0 +1,219 @@
+/* ===== VERIFY LOCATION SCREEN ===== */
+
+.verify-screen {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--gray-100);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.verify-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--primary-900);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.verify-header .back-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition-fast);
+}
+
+.verify-header .back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.verify-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Body - centered content */
+.verify-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+/* Map pin with pulsing circle */
+.verify-pin-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.verify-pin-pulse {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(13, 71, 161, 0.08);
+  animation: verifyPulse 2s ease-in-out infinite;
+}
+
+.verify-pin-pulse-inner {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(13, 71, 161, 0.12);
+  animation: verifyPulseInner 2s ease-in-out infinite 0.3s;
+}
+
+@keyframes verifyPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes verifyPulseInner {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.verify-pin-icon {
+  position: relative;
+  z-index: 1;
+  color: var(--primary-900);
+  filter: drop-shadow(0 2px 6px rgba(13, 71, 161, 0.3));
+}
+
+/* Station info */
+.verify-station-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.verify-station-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.verify-range-text {
+  font-size: 14px;
+  color: var(--gray-600);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Green badge/card */
+.verify-range-card {
+  background: var(--green-100);
+  border: 1.5px solid var(--green-300);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.verify-range-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-700);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.verify-range-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.verify-range-message {
+  font-size: 13px;
+  color: var(--green-700);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.verify-distance-label {
+  font-size: 12px;
+  color: var(--gray-600);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.verify-distance-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--green-700);
+  line-height: 1.1;
+}
+
+/* Continue button */
+.verify-bottom {
+  padding: 20px 24px 28px;
+}
+
+.verify-continue-btn {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--primary-900);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+}
+
+.verify-continue-btn:hover {
+  background: var(--primary-800);
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+  transform: translateY(-1px);
+}
+
+.verify-continue-btn:active {
+  transform: scale(0.98);
+}

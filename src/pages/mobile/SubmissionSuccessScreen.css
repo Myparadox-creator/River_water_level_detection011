@@ -1,0 +1,303 @@
+.submission-success-screen {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #F5F7FA;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.ss-header {
+  background: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #E8ECF0;
+}
+
+.ss-header-back {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.ss-header-back:active {
+  background: #f0f0f0;
+}
+
+.ss-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Content */
+.ss-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+/* Success animation container */
+.ss-check-container {
+  margin: 40px 0 24px;
+  animation: ssScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes ssScaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ss-check-circle {
+  width: 100px;
+  height: 100px;
+}
+
+.ss-check-circle-bg {
+  fill: #E8F5E9;
+  animation: ssCirclePulse 2s ease-in-out infinite;
+}
+
+@keyframes ssCirclePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.ss-check-circle-ring {
+  fill: none;
+  stroke: #2E7D32;
+  stroke-width: 3;
+}
+
+.ss-check-path {
+  fill: none;
+  stroke: #2E7D32;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: ssCheckDraw 0.6s 0.3s ease forwards;
+}
+
+@keyframes ssCheckDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Success Text */
+.ss-success-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  text-align: center;
+  animation: ssFadeUp 0.5s 0.5s ease both;
+}
+
+.ss-success-subtitle {
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 32px;
+  text-align: center;
+  animation: ssFadeUp 0.5s 0.6s ease both;
+}
+
+@keyframes ssFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Summary Card */
+.ss-summary-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  overflow: hidden;
+  animation: ssFadeUp 0.5s 0.7s ease both;
+}
+
+.ss-summary-header {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ss-summary-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #0D47A1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ss-summary-header-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0D47A1;
+  margin: 0;
+}
+
+.ss-summary-rows {
+  padding: 4px 0;
+}
+
+.ss-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #F0F2F5;
+}
+
+.ss-summary-row:last-child {
+  border-bottom: none;
+}
+
+.ss-summary-label {
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+}
+
+.ss-summary-value {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-align: right;
+  max-width: 55%;
+}
+
+/* Status badge */
+.ss-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ss-status-badge--submitted {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.ss-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Done Button */
+.ss-done-area {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  padding: 16px 20px;
+  background: #fff;
+  border-top: 1px solid #E8ECF0;
+  box-sizing: border-box;
+  z-index: 10;
+  animation: ssFadeUp 0.5s 0.9s ease both;
+}
+
+.ss-done-btn {
+  width: 100%;
+  padding: 16px;
+  background: #0D47A1;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ss-done-btn:active {
+  background: #1565C0;
+  transform: scale(0.98);
+}
+
+/* Confetti particles (decorative) */
+.ss-particles {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.ss-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: ssParticle 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.ss-particle:nth-child(1) { background: #2E7D32; animation-delay: 0.3s; --px: -40px; --py: -50px; }
+.ss-particle:nth-child(2) { background: #0D47A1; animation-delay: 0.4s; --px: 40px; --py: -30px; }
+.ss-particle:nth-child(3) { background: #E65100; animation-delay: 0.5s; --px: -30px; --py: 40px; }
+.ss-particle:nth-child(4) { background: #2E7D32; animation-delay: 0.35s; --px: 50px; --py: 20px; }
+.ss-particle:nth-child(5) { background: #0D47A1; animation-delay: 0.45s; --px: -50px; --py: 10px; }
+.ss-particle:nth-child(6) { background: #1565C0; animation-delay: 0.55s; --px: 20px; --py: -45px; }
+
+@keyframes ssParticle {
+  0% {
+    opacity: 1;
+    transform: translate(100px, 100px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(100px + var(--px)), calc(100px + var(--py))) scale(0);
+  }
+}

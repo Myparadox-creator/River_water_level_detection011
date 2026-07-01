@@ -1,0 +1,73 @@
+/* ReadingsPage.css */
+
+.readings-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.readings-topbar h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.readings-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.readings-filters select,
+.readings-filters input[type='date'] {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  background: var(--white);
+  cursor: pointer;
+}
+
+.readings-search {
+  position: relative;
+}
+
+.readings-search input {
+  padding: 8px 12px 8px 36px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  width: 200px;
+  background: var(--white);
+}
+
+.readings-search input:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.readings-search svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-400);
+}
+
+/* Sortable header */
+.sortable-th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable-th:hover {
+  color: var(--primary-700);
+}
+
+.sort-icon {
+  margin-left: 4px;
+  vertical-align: middle;
+  opacity: 0.5;
+}

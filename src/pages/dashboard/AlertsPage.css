@@ -1,0 +1,131 @@
+/* AlertsPage.css */
+
+.alerts-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.alerts-topbar h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Filter tabs */
+.alerts-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.alert-tab {
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  color: var(--gray-600);
+  transition: all var(--transition-fast);
+}
+
+.alert-tab:hover {
+  border-color: var(--primary-600);
+  color: var(--primary-800);
+}
+
+.alert-tab.active {
+  background: var(--primary-900);
+  color: var(--white);
+  border-color: var(--primary-900);
+}
+
+/* Alert cards */
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alert-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-base);
+}
+
+.alert-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.alert-card.unread {
+  background: var(--primary-50);
+  border-color: var(--primary-200);
+}
+
+.alert-stripe {
+  width: 5px;
+  flex-shrink: 0;
+}
+
+.alert-stripe.critical { background: var(--red-600); }
+.alert-stripe.warning  { background: var(--orange-500); }
+.alert-stripe.info     { background: var(--primary-600); }
+
+.alert-card-body {
+  padding: 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.alert-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert-card-header h4 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.alert-severity-badge {
+  text-transform: capitalize;
+}
+
+.alert-card-body p {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.alert-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+.alert-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-600);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}

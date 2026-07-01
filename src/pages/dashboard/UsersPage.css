@@ -1,0 +1,71 @@
+/* UsersPage.css */
+
+.users-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.users-topbar h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Role badges */
+.badge-role-field_officer {
+  background: var(--primary-100);
+  color: var(--primary-900);
+}
+
+.badge-role-supervisor {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.badge-role-central_analyst {
+  background: var(--orange-100);
+  color: var(--orange-700);
+}
+
+.badge-role-public {
+  background: var(--gray-200);
+  color: var(--gray-700);
+}
+
+/* Action buttons inside table */
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-actions button {
+  padding: 4px 10px;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.table-action-edit {
+  background: var(--primary-100);
+  color: var(--primary-900);
+  border: none;
+}
+
+.table-action-edit:hover {
+  background: var(--primary-200);
+}
+
+.table-action-delete {
+  background: var(--red-100);
+  color: var(--red-700);
+  border: none;
+}
+
+.table-action-delete:hover {
+  background: var(--red-100);
+  color: var(--red-600);
+}

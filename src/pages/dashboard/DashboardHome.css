@@ -1,0 +1,106 @@
+/* DashboardHome.css — page-specific additions */
+
+/* Top bar date label */
+.topbar-date {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar-date svg {
+  color: var(--gray-400);
+}
+
+/* Chart panel */
+.chart-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.chart-container {
+  width: 100%;
+  height: 280px;
+}
+
+/* Custom chart legend */
+.chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 8px 0 4px;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.chart-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Map */
+.map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.map-container .leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* Recent readings panel — full width */
+.recent-readings-panel {
+  margin-bottom: 24px;
+}
+
+/* Stat icon wrapper */
+.stat-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stat-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card.blue .stat-card-icon {
+  background: var(--primary-100);
+  color: var(--primary-800);
+}
+
+.stat-card.green .stat-card-icon {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.stat-card.orange .stat-card-icon {
+  background: var(--orange-100);
+  color: var(--orange-600);
+}
+
+.stat-card.red .stat-card-icon {
+  background: var(--red-100);
+  color: var(--red-600);
+}

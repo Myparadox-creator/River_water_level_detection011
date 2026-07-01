@@ -1,0 +1,257 @@
+.reading-result-screen {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #F5F7FA;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Light header */
+.rr-header {
+  background: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #E8ECF0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rr-header-back {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.rr-header-back:active {
+  background: #f0f0f0;
+}
+
+.rr-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Content */
+.rr-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+/* AI Detection Card */
+.rr-detection-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 12px;
+}
+
+.rr-detection-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D47A1;
+  margin-bottom: 16px;
+}
+
+.rr-detection-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rr-detection-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0D47A1;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+.rr-detection-value span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #666;
+  margin-left: 4px;
+}
+
+/* Confidence bar */
+.rr-confidence {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rr-confidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rr-confidence-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+.rr-confidence-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+.rr-confidence-track {
+  width: 100%;
+  height: 8px;
+  background: #E8F5E9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rr-confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #43A047, #2E7D32);
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Note */
+.rr-note {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 0 10px;
+}
+
+/* Form Card */
+.rr-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.rr-form-group {
+  margin-bottom: 20px;
+}
+
+.rr-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.rr-form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.rr-form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #E0E4E8;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #FAFBFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.rr-form-input:focus {
+  border-color: #0D47A1;
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+  background: #fff;
+}
+
+.rr-form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #E0E4E8;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #FAFBFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  box-sizing: border-box;
+}
+
+.rr-form-textarea:focus {
+  border-color: #0D47A1;
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+  background: #fff;
+}
+
+/* Submit Button */
+.rr-submit-area {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  padding: 16px 20px;
+  background: #fff;
+  border-top: 1px solid #E8ECF0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.rr-submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: #0D47A1;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rr-submit-btn:active {
+  background: #1565C0;
+  transform: scale(0.98);
+}
+
+.rr-submit-btn:disabled {
+  background: #90CAF9;
+  cursor: not-allowed;
+}
